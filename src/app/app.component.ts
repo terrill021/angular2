@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'master-key';
+  title = 'tour of heroes';
+  hero : Hero = {
+      id : 1,
+    name : 'Alejandro'
+  }
+}
+export class Hero {
+  id: number;
+  name: string;
 }

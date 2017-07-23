@@ -1,30 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import {Hero} from './Hero';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
+
+  // properties
   title = 'tour of heroes';
-  hero: Hero = {
-      id : 1,
-    name : 'Alejandro'
-  };
-
   heroes = HEROES;
-
   selectedHero: Hero;
 
+  // Methods
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
-    alert(`Hello ${hero.name} !!!`);
   }
-}
-
-export class Hero {
-  id: number;
-  name: string;
 }
 
 const HEROES: Hero[] = [
@@ -33,9 +26,5 @@ const HEROES: Hero[] = [
   { id: 13, name: 'Bombasto' },
   { id: 14, name: 'Celeritas' },
   { id: 15, name: 'Magneta' },
-  { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' }
+  { id: 16, name: 'RubberMan' }
 ];

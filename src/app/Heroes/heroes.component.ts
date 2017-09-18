@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {Hero} from './Hero';
-import { HeroService } from './hero.service';
+import {Hero} from '../Hero';
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-heroes',
@@ -34,6 +34,11 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes().then(heroes =>
       this.heroes = heroes
     );
+  }
+
+  goToDetail(): void {
+    //
+    
   }
 
 }

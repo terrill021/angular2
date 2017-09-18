@@ -32,6 +32,10 @@ import { DashBoardComponentComponent } from './dash-board-component/dash-board-c
       {
         path: 'dashboard',
         component: DashBoardComponentComponent
+      },
+      {
+        path: 'detail/:id',
+        component: HeroDetailComponent
       }
     ])
   ],

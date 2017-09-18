@@ -11,35 +11,18 @@ import { DashBoardComponentComponent } from './dash-board-component/dash-board-c
 import { AppRoutingComponent } from './app-routing/app-routing.component';
 
 @NgModule({
+
+  // @Pipe/@Directive/@Component
   declarations: [
     AppComponent,
     HeroDetailComponent,
     HeroesComponent,
-    DashBoardComponentComponent,
-    AppRoutingComponent
+    DashBoardComponentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot ([
-      {
-        path: '',
-        redirectTo: 'dashboard',
-        pathMatch: 'full'
-      },
-      {
-        path: 'heroes',
-        component: HeroesComponent
-      },
-      {
-        path: 'dashboard',
-        component: DashBoardComponentComponent
-      },
-      {
-        path: 'detail/:id',
-        component: HeroDetailComponent
-      }
-    ])
+    AppRoutingComponent
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
